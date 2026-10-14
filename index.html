@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Harnia Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+        <div class="loader-logo">
+            <img src="images/loading_logo.png" alt="Loading" class="loader-img">
+            <div class="loader-ring"></div>
+        </div>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo + Text -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.png" alt="Dr. John Smith" id="logo">
+            <span id="logo-text">
+                Advanced Harnia Center<br>
+                <small>Bangladesh</small>
+            </span>
+        </a>
+
+        <!-- Mobile hamburger (visible on small screens) -->
+        <button id="mobile-menu-btn" class="navbar-toggler d-lg-none" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="bi bi-list fs-4"></i>
+        </button>
+
+        <!-- Nav links (desktop) -->
+        <div class="d-flex align-items-center gap-4 nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#schedule" class="nav-link">Schedule</a>
+            <a href="video.html" class="nav-link">Health Videos</a>
+            <a href="#contact" class="btn btn-outline-primary rounded-pill px-4">
+                Contact
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile menu & overlay (off-canvas) -->
+    <div id="mobile-menu" class="mobile-menu d-lg-none" aria-hidden="true" aria-modal="true" role="dialog">
+        <div class="mobile-menu-header d-flex align-items-center justify-content-between px-3 py-2">
+            <div class="d-flex align-items-center">
+                <img src="images/logo.png" alt="Dr. John Smith" id="logo" style="height:30px;">
+                <span class="ms-2 fw-bold">Menu</span>
+            </div>
+            <button id="mobile-menu-close" class="mobile-close btn btn-link p-0" aria-label="Close menu">
+                <i class="bi bi-x-lg fs-4"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-body px-3 pb-4">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#schedule" class="mobile-link">Schedule</a>
+            <a href="video.html" class="mobile-link">Health Videos</a>
+            <a href="#contact" class="btn btn-outline-primary rounded-pill w-100 mt-2">Contact</a>
+        </nav>
+    </div>
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay d-lg-none" tabindex="-1"></div>
+</nav>
+
+
+
+<!-- HERO -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT -->
+            <div class="col-md-6 hero-text text-center text-md-start mb-4 mb-md-0 order-2 order-md-1">
+                <h1 class="display-5 fw-bold">
+                    <small>Welcome to</small> <br>
+                    <span class="text-primary">
+                        Advanced Harnia Center<br>
+                        <small>Bangladesh</small>
+                    </span>
+                </h1>
+
+                <p class="lead mt-3">
+                    A healthier tomorrow starts Today. Schedule your Appointment <br>
+                    Your wellness, Our Expertise
+                </p>
+
+                <a href="#schedule" class="btn btn-primary rounded-pill px-4 py-2 mt-3">
+                    Make An Appointment
+                </a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-md-6 hero-image position-relative text-center order-1 order-md-2">
+
+                <!-- circle -->
+                <div class="circle-bg position-absolute top-50 start-50 translate-middle"></div>
+
+                <!-- doctor -->
+                <img src="images/doctor.png" class="doctor-img img-fluid" alt="Doctor">
+
+                <!-- card: satisfied -->
+                <div class="floating-card patients position-absolute">
+                    <strong>10k+</strong>
+                    <small>Satisfied Patients</small>
+                </div>
+
+                <!-- card: calendar -->
+                <div class="floating-card calendar position-absolute">
+                    <small id="calendar-month"></small>
+                    <div class="dates" id="calendar-dates"></div>
+                </div>
+
+                <!-- syringe icon -->
+                <div class="floating-icon position-absolute">
+                    <i class="bi bi-capsule"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ABOUT DOCTOR -->
+<section id="about" class="about-section no-image">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+            <span class="section-tag">About the Doctor</span>
+            <h2 class="section-title">
+                Expertise You Can Trust, <span>Care You Can Feel</span>
+            </h2>
+            <p class="about-subtitle">
+                Advanced surgical care with compassion, precision, and integrity
+            </p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+
+                <div class="about-card">
+
+                    <p class="about-text">
+                        <strong>Dr. Md. Ahsan Habib</strong> is a highly qualified and
+                        experienced surgeon, committed to delivering safe, ethical,
+                        and patient-centered surgical care using modern techniques
+                        and evidence-based practices.
+                    </p>
+
+                    <p class="about-text">
+                        He specializes in <strong>Advanced Endo-Laparoscopic,
+                        General, and Hernia Surgery</strong>, with a strong focus on
+                        minimally invasive procedures that ensure faster recovery,
+                        reduced pain, and better outcomes for patients.
+                    </p>
+
+                    <!-- INFO GRID -->
+                    <div class="about-info-grid">
+
+                        <div class="info-item">
+                            <i class="bi bi-mortarboard"></i>
+                            <div>
+                                <h6>Qualifications</h6>
+                                <p>
+                                    MBBS, BCS, MCPS, MS (Surgery), MSc <br>
+                                    EFIAGES, FMAS <br>
+                                    Fellow – Laparoscopic Hernia Surgery (India)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-heart-pulse"></i>
+                            <div>
+                                <h6>Specialization</h6>
+                                <p>
+                                    Advanced Endo-Laparoscopic Surgery <br>
+                                    General & Hernia Surgery
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-hospital"></i>
+                            <div>
+                                <h6>Current Position</h6>
+                                <p>
+                                    Assistant Professor <br>
+                                    Department of Surgery <br>
+                                    Shaheed Suhrawardy Medical College, Dhaka
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h6>Professional Membership</h6>
+                                <p>
+                                    Member, SAGES (USA)
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="#appointment" class="btn btn-primary rounded-pill px-4">
+                            Book a Consultation
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- DISEASES TREATED -->
+<section id="diseases" class="diseases-section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+            <span class="section-tag">Conditions Treated</span>
+            <h2 class="section-title">
+                Hernia & Related <span>Conditions</span>
+            </h2>
+            <p class="section-subtitle">
+                Comprehensive treatment of all types of hernia for adults and children
+            </p>
+        </div>
+
+        <!-- DISEASE GRID -->
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Inguinal Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Incisional Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Umbilical Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Para-umbilical Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Epigastric Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Femoral Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Diaphragmatic Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Lumbar Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Recurrent Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Diastasis Recti</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Paediatric Hernia</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="disease-card">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p>Parastomal Hernia</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- SERVICES -->
+<section id="services" class="pb-5 bg-light">
+    <div class="container">
+        <!-- <h2 class="text-center pt-4 mb-5">Services</h2> -->
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+            <span class="section-tag">Our Expertise</span>
+            <h2 class="section-title">
+                How We Treat <span>Hernias</span>
+            </h2>
+            <p class="section-subtitle">
+                Advanced surgical services for hernia and related abdominal wall conditions
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Laparoscopic Hernia Surgery -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 h-100 shadow-sm border-0 rounded-4 service-card">
+                    <div class="icon-box text-primary fs-1 mb-3"><i class="bi bi-scissors"></i></div>
+                    <h5 class="mt-3">Laparoscopic Hernia Surgery</h5>
+                    <p>Minimally invasive repair for inguinal, umbilical, and femoral hernias with faster recovery and minimal scarring.</p>
+                </div>
+            </div>
+
+            <!-- Open Hernia Surgery -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 h-100 shadow-sm border-0 rounded-4 service-card">
+                    <div class="icon-box text-success fs-1 mb-3"><i class="bi bi-hospital"></i></div>
+                    <h5 class="mt-3">Open Hernia Surgery</h5>
+                    <p>Traditional repair technique for complicated, large, or recurrent hernias ensuring safe and effective treatment.</p>
+                </div>
+            </div>
+
+            <!-- Pediatric & Specialized Hernia Care -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 h-100 shadow-sm border-0 rounded-4 service-card">
+                    <div class="icon-box text-warning fs-1 mb-3"><i class="bi bi-people"></i></div>
+                    <h5 class="mt-3">Pediatric & Specialized Hernia Care</h5>
+                    <p>Expert care for children, recurrent hernias, parastomal hernias, and complex abdominal wall hernias.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- DOCTOR SCHEDULE -->
+<section id="schedule" class="schedule-section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+            <span class="section-tag">Doctor Schedule</span>
+            <h2 class="schedule-title">
+                Chamber <span>Timings</span>
+            </h2>
+            <p class="schedule-subtitle">
+                Please check schedule before visiting
+            </p>
+        </div>
+
+        <!-- SCHEDULE GRID -->
+        <div class="schedule-grid">
+
+            <!-- আল মারকাজুল ইসলামী হাসপাতাল  -->
+            <div class="schedule-card"
+                data-start="14:30"
+                data-end="16:00"
+                data-map="https://www.google.com/maps?q=Al+Markazul+Islami+Hospital+Mohammadpur+Dhaka">
+
+                <div class="day">আল মারকাজুল ইসলামী হাসপাতাল</div>
+
+                <div class="time">
+                    প্রতিদিন: ২:৩০ PM – ৪:০০ PM
+                </div>
+
+                <div class="hospital-info">
+                    <div class="mb-3">
+                        📍 ২১/১৭ বাবর রোড, মোহাম্মদপুর, ঢাকা
+                    </div>
+                    ☎ ফোন: <a href="tel:+8801316111688">+880 1316-111688</a><br>
+                    🔥 হটলাইন: <a href="tel:+8801995559999">+880 1995-559999</a><br>
+                    📅 অ্যাপয়েন্টমেন্ট: <a href="tel:+8801990439063">+880 1990-439063</a>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status">—</span>
+                    <a href="#" class="map-btn" target="_blank">📍 Get Directions</a>
+                </div>
+            </div>
+
+
+            <!-- হেলথ কেয়ার ডায়াগনস্টিক সেন্টার -->
+            <div class="schedule-card"
+                data-start="16:00"
+                data-end="18:00"
+                data-map="https://www.google.com/maps?q=Health+Care+Diagnostic+Center+Shyamoli+Dhaka">
+
+                <div class="day">হেলথ কেয়ার ডায়াগনস্টিক সেন্টার</div>
+
+                <div class="time">
+                    প্রতিদিন: ৪:০০ PM – ৬:০০ PM
+                </div>
+
+                <div class="hospital-info">
+                    <div class="mb-3">
+                        📍 ২৩/২, খিলজি রোড, শিশু মেলার বিপরীত পাশে, শ্যামলী, ঢাকা
+                    </div>
+                    ☎ ফোন: <a href="tel:09610001277">09610-001277</a><br>
+                    📞 <a href="tel:01712503159">01712-503159</a>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status">—</span>
+                    <a href="#" class="map-btn" target="_blank">📍 Get Directions</a>
+                </div>
+            </div>
+
+
+            <!-- গ্রীন স্পেশালাইজড হাসপাতাল  -->
+            <div class="schedule-card"
+                data-start="18:00"
+                data-end="20:00"
+                data-map="https://www.google.com/maps?q=Green+Specialized+Hospital+Shewrapara+Mirpur+Dhaka">
+
+                <div class="day">গ্রীন স্পেশালাইজড হাসপাতাল</div>
+
+                <div class="time">
+                    প্রতিদিন: ৬:০০ PM – ৮:০০ PM
+                </div>
+
+                <div class="hospital-info">
+                    <div class="mb-3">
+                        📍 ২২০/ডি (১/১), বেগম রোকেয়া সরণী, শেওড়াপাড়া, মিরপুর, ঢাকা
+                    </div>
+                    ☎ <a href="tel:01889929955">01889-929955</a><br>
+                    <a href="tel:01819104376">01819-104376</a><br>
+                    <a href="tel:01712503159">01712-503159</a>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status">—</span>
+                    <a href="#" class="map-btn" target="_blank">📍 Get Directions</a>
+                </div>
+            </div>
+
+
+
+            <!-- CLOSED DAYS -->
+            <div class="schedule-card closed">
+                <div class="day">মঙ্গলবার</div>
+                <div class="time">—</div>
+                <span class="status closed">Chamber Closed</span>
+            </div>
+
+            <div class="schedule-card closed">
+                <div class="day">শুক্রবার</div>
+                <div class="time">—</div>
+                <span class="status closed">Chamber Closed</span>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+            <a href="#appointment" class="btn btn-primary rounded-pill px-4">
+                Book Appointment
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT FORM -->
+<section id="contact" class="section-padding py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-tag">Contact</span>
+            <h2 class="schedule-title">
+                Send Message for <span>Any Queries</span>
+            </h2>
+            <p class="schedule-subtitle">
+                Please check the schedule before visiting
+            </p>
+        </div>
+
+
+        <div class="row g-4 align-items-stretch">
+
+            <!-- CONTACT INFO -->
+            <div class="col-lg-6 order-2 order-md-1">
+    <div class="contact-info">
+
+        <div class="info-card">
+            <div class="info-header">
+                <i class="bi bi-hospital"></i>
+                <h5>আল মারকাজুল ইসলামী হাসপাতাল</h5>
+            </div>
+
+            <a href="tel:+8801316111688" class="phone">
+                <i class="bi bi-telephone"></i> +880 1316-111688
+            </a>
+            <a href="tel:+8801995559999" class="phone">
+                <i class="bi bi-telephone"></i> +880 1995-559999
+            </a>
+            <a href="tel:+8801990439063" class="phone">
+                <i class="bi bi-telephone"></i> +880 1990-439063
+            </a>
+        </div>
+
+        <div class="info-card">
+            <div class="info-header">
+                <i class="bi bi-hospital"></i>
+                <h5>হেলথ কেয়ার ডায়াগনস্টিক সেন্টার</h5>
+            </div>
+
+            <a href="tel:09610001277" class="phone">
+                <i class="bi bi-telephone"></i> 09610-001277
+            </a>
+            <a href="tel:01712503159" class="phone">
+                <i class="bi bi-telephone"></i> 01712-503159
+            </a>
+        </div>
+
+        <div class="info-card">
+            <div class="info-header">
+                <i class="bi bi-hospital"></i>
+                <h5>গ্রীন স্পেশালাইজড হাসপাতাল</h5>
+            </div>
+
+            <a href="tel:01889929955" class="phone">
+                <i class="bi bi-telephone"></i> 01889-929955
+            </a>
+            <a href="tel:01819104376" class="phone">
+                <i class="bi bi-telephone"></i> 01819-104376
+            </a>
+            <a href="tel:01712503159" class="phone">
+                <i class="bi bi-telephone"></i> 01712-503159
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-6 order-1 order-md-2">
+                <div class="card border-0 shadow-lg rounded-4 p-4 h-100">
+                    <h4 class="mb-4 fw-semibold text-center"><u>Send a Message</u></h5>
+
+                    <form id="contactForm" class="mt-5">
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label"><b>Full Name</b></label>
+                                <input type="text" class="form-control form-control-md rounded-pill"
+                                       placeholder="Your Name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label"><b>Email Address</b></label>
+                                <input type="email" class="form-control form-control-md rounded-pill"
+                                       placeholder="Your Email" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label"><b>Phone Number</b></label>
+                                <input type="tel" class="form-control form-control-md rounded-pill"
+                                       placeholder="+880 1XXXXXXXXX" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label"><b>Message</b></label>
+                                <textarea class="form-control rounded-4"
+                                          rows="8"
+                                          placeholder="Describe your problem or appointment request..."
+                                          required></textarea>
+                            </div>
+
+                            <div class="col-12 text-center mt-3">
+                                <button class="btn btn-primary btn-lg rounded-pill px-5">
+                                    <i class="bi bi-send"></i> Send Message
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- GOOGLE MAP -->
+<section id="map-section" class="map-section pb-5">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+            <span class="section-tag">Map</span>
+            <h2 class="schedule-title">
+                Find <span>Our Location</span>
+            </h2>
+            <p class="schedule-subtitle">
+                Please check the schedule before visiting
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <!-- Optional Google Map -->
+                <div class="mt-4 rounded-4 overflow-hidden">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="300" style="border:0;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row gy-4">
+
+            <!-- BRAND -->
+            <div class="col-md-4">
+                <h4 class="footer-brand">
+                    <i class="bi bi-heart-pulse"></i> Dr. Md. Ahsan Habib
+                </h4>
+                <p class="footer-text">
+                    <i>Providing compassionate, trusted, and modern healthcare
+                    solutions for a healthier tomorrow.</i>
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="col-md-4">
+                <h5 class="footer-title">Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Doctor</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#schedule">Appointment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="col-md-4">
+                <h5 class="footer-title">Contact</h5>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="bi bi-geo-alt"></i>
+                        Medical Center, Dhaka
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone"></i>
+                        +880 1234 567 890
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope"></i>
+                        AhsanHabib@gmail.com
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom text-center">
+            © 2026 Dr. Md. Ahsan Habib. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- WhatsApp -->
+<a href="https://wa.me/880123456789" class="whatsapp-btn">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+</a>
+
+
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
